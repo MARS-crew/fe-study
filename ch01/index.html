@@ -5,13 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      h1 {
+      #red {
         color: red;
+      }
+      #blue {
+        color: blue;
+      }
+      #green {
+        color: green;
       }
     </style>
   </head>
   <body>
-    <h1>Hello world</h1>
+    <h1 id="red">RED</h1>
+    <h1 id="blue">BLUE</h1>
+    <h1 id="green">GREEN</h1>
   </body>
-  <script src="index-1.js"></script>
+  <script>
+    var red = document.getElementById("red");
+    var blue = document.getElementById("blue");
+    var green = document.getElementById("green");
+
+    red.addEventListener("click", function () {
+      alert("RED");
+    });
+
+    blue.addEventListener("click", function () {
+      alert("BLUE");
+    });
+
+    green.addEventListener("click", function () {
+      alert("GREEN");
+    });
+  </script>
 </html>
