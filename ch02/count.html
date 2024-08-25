@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="counter">0</span>
+    <button id="increase_btn">+</button>
+    <button id="descrease_btn">-</button>
+    <button id="descrease_btn">INIT</button>
+  </body>
+  <script>
+    var count = 0;
+
+    // 선택자의 종료
+    const counter = document.querySelector("#counter");
+    const increaseBtn = document.querySelector("#increase_btn");
+    const decreaseBtn = document.querySelector("#descrease_btn");
+
+    // 증가 이벤트
+    increaseBtn.addEventListener("click", function () {
+      count++;
+      console.log("Count : ", count);
+      counter.textContent = count;
+    });
+  </script>
+</html>

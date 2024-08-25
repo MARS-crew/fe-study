@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // var list = ["red", "blue", "green"]; // # Array
+    var ageList = [10, 20, 30, 40, 50]; // # Array
+
+    const newList = ageList.map((item) => {
+      if (item >= 10) {
+        return `당신의 나이는 10대 입니다.`;
+      } else if (item >= 20) {
+        return `당신의 나이는 20대 입니다.`;
+      } else if (item >= 30) {
+        return `당신의 나이는 30대 입니다.`;
+      } else if (item >= 40) {
+        return `당신의 나이는 40대 입니다.`;
+      } else {
+        return `당신의 나이는 50대 입니다.`;
+      }
+    });
+
+    // var newList = list.map((item) => {
+    //   return `당신의 색상은 ${item}입니다.`;
+    // });
+
+    // for (const item of list) {
+    //   var h1 = document.createElement("h1");
+    //   h1.textContent = item;
+    //   document.body.appendChild(h1);
+
+    //   h1.addEventListener("click", function () {
+    //     alert(item.toUpperCase());
+    //   });
+    // }
+
+    // // for문
+    // for (var i = 0; i < list.length; i++) {
+    //   console.log("FOR문 : ", list[i]);
+    // }
+
+    // // forEach문
+    // list.forEach((item, index) => {
+    //   console.log("FOR EACH : ", item, index);
+    // });
+
+    // // forof문
+    // for (const item of list) {
+    //   console.log("FOR OF : ", item);
+    // }
+  </script>
+</html>
