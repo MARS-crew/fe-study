@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter ID" id="id" />
+    <br />
+    <input type="password" placeholder="Enter Password" id="password" />
+    <br />
+    <button id="login_btn">LOGIN</button>
+  </body>
+  <script>
+    const idInput = document.querySelector("#id");
+    const passwordInput = document.querySelector("#password");
+    const button = document.querySelector("#login_btn");
+
+    button.addEventListener("click", async () => {
+      const id = idInput.value;
+      const password = passwordInput.value;
+
+      fetch("http://125.133.34.224:8080/api/v1/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: id, password }),
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((response) => {
+          console.log("response", response);
+        })
+        .catch((error) => {
+          alert("Error:", error);
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</html>

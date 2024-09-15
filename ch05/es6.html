@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // # 변수 선언 방법
+    var a = 3;
+    // console.log("A : ", a);
+    var a = 4;
+    // console.log("A : ", a);
+
+    // const, let
+    // let
+    let b = 3;
+    let c;
+    b = 4;
+
+    // const -> 상수
+    const d = 3;
+    // const e;
+    // d = 5;
+
+    function getAge(age) {
+      return age;
+    }
+
+    const age = getAge(20);
+
+    // Template literals
+    const name = "John";
+    // const message = "Hello, " + name + "!";
+    const message = `Hello My name is ${name}! and born in ${2001}`;
+    // const text = `${code} - ${name}`
+    console.log(message);
+
+    // Arrow Function
+    function add(a, b) {
+      return a + b;
+    }
+
+    const add2 = function (a, b) {
+      return a + b;
+    };
+
+    const add3 = (a, b) => {
+      return a + b;
+    };
+
+    const add4 = (a, b) => a + b;
+  </script>
+</html>
